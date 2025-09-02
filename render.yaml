@@ -9,6 +9,7 @@ services:
     env: java
     plan: free
     branch: main
+    rootDir: .
     buildCommand: ./mvnw clean install
     startCommand: java -Dspring.profiles.active=postgres -jar target/notes-app-0.0.1-SNAPSHOT.jar
     envVars:
