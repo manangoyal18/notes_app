@@ -13,7 +13,7 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins("https://notes-app-git-main-manan-goyals-projects-bd92f520.vercel.app")
+                        .allowedOriginPatterns("https://*.vercel.app") // allow all Vercel preview + prod
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
