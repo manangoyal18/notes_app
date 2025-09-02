@@ -1,3 +1,5 @@
+version: "1"
+
 databases:
   - name: notes-db
     databaseName: notesdb
