@@ -8,12 +8,11 @@ databases:
 services:
   - type: web
     name: notes-backend
-    env: java
+    env: docker
     plan: free
     branch: main
     rootDir: notes-backend
-    buildCommand: ./mvnw clean install
-    startCommand: java -Dspring.profiles.active=postgres -jar target/notes-app-0.0.1-SNAPSHOT.jar
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: SPRING_DATASOURCE_URL
         fromDatabase:
